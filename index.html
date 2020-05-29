@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://well-balanced.github.io/warm-warm/">
+    <meta property="og:title" content="Warm Warm">
+    <meta property="og:description" content="따뜻하게 안아주세요">
+    <meta property="og:image" content="static/images/pome.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Nanum+Gothic&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
     <script
     src="https://code.jquery.com/jquery-3.5.1.slim.js"
     integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
     crossorigin="anonymous"></script>
     <title>Warm Warm</title>
+    <link rel=" shortcut icon" href="static/icons/favicon.ico">
+    <link rel="icon" href="static/icons/favicon.ico">
 </head>
 <body>
     <div class="container">
@@ -26,12 +33,21 @@
                 <img src="static/images/poor-puppy-1.jpg">
             </article>
             <article class="description">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem commodi dicta vero beatae adipisci reiciendis architecto cum! Dolorum rerum nostrum magnam laborum dolorem quod accusamus amet voluptates ipsa! Animi, laborum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae ducimus vero magnam, nam ipsam, nemo minima harum cumque cupiditate tempore consequuntur. Officia natus sit tempora accusamus ratione consequatur eos dolor. 
+                <p class="description-title">“ 따뜻함 ”</p>
+                <p class="description-subtitle"><strong><u style="text-underline-position: under;">반려동물의 가슴 아픈 사연을 들려주세요.</u></strong></p>
+                저희는 여러분들이 알고 있는 안타까운 사연을 널리 알리고, 회원님의 공감을 받은 사연을 돕기 위해 제품을 기획합니다.
+                <br><br>
+                회원님의 정성 어린 글은
+                <br>
+                반려동물에게 따뜻한 온기로 전해집니다.
+                <br>
+                <br>
+                <img style="zoom: 0.5;"src="static/images/go-to-community.png">
             </article>
         </section>
         <section>
             <article class="description bottom">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem commodi dicta vero beatae adipisci reiciendis architecto cum! Dolorum rerum nostrum magnam laborum dolorem quod accusamus amet voluptates ipsa! Animi, laborum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae ducimus vero magnam, nam ipsam, nemo minima harum cumque cupiditate tempore consequuntur. Officia natus sit tempora accusamus ratione consequatur eos dolor. 
+                    따뜻함
             </article>
             <article class="photo">
                 <img src="static/images/poor-puppy-3.jpg">
@@ -92,8 +108,8 @@
     }
 
     .photo img {
-        width: 590px;
-        height: 790px;
+        width: 594px;
+        height: 794px;
         position: relative;
         top: 50%;
         bottom: 50%;
@@ -104,8 +120,8 @@
         width: 400px;
         margin-top: 50px;
         display: inline-block;
-        font-size: 20px;
-        font-family: 'Balsamiq Sans';
+        font-size: 16px;
+        font-family: 'Nanum Gothic', sans-serif;
         line-height: 35px;
     }
     
@@ -124,6 +140,16 @@
 
     #warmth-counter {
         float: right;
+    }
+
+    .description-title {
+        font-family: 'Nanum Myeongjo', serif;
+        font-size: 36px;
+    }
+
+    .description-subtitle {
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: 20px;
     }
 
 </style>
