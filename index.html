@@ -3,9 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.js"
+    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+    crossorigin="anonymous"></script>
     <title>Warm Warm</title>
 </head>
 <body>
-    <h1>Hi</h1>
+    <div class="container">
+        <div id="header">
+            <h1>Warm Warm</h1>
+            <span id="warmth-counter">wammer's warmth🎁 <p id="counter"></p> won</span>
+        </div>
+        <nav>
+            <a href="/">ABOUT</a>
+            <a href="/">STORY</a>
+            <a href="/">SHOP</a>
+        </nav>
+        <section>
+            <article class="photo">
+                <img src="static/images/poor-puppy-1.jpg">
+            </article>
+            <article class="description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem commodi dicta vero beatae adipisci reiciendis architecto cum! Dolorum rerum nostrum magnam laborum dolorem quod accusamus amet voluptates ipsa! Animi, laborum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae ducimus vero magnam, nam ipsam, nemo minima harum cumque cupiditate tempore consequuntur. Officia natus sit tempora accusamus ratione consequatur eos dolor. 
+            </article>
+        </section>
+        <section>
+            <article class="description bottom">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem commodi dicta vero beatae adipisci reiciendis architecto cum! Dolorum rerum nostrum magnam laborum dolorem quod accusamus amet voluptates ipsa! Animi, laborum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae ducimus vero magnam, nam ipsam, nemo minima harum cumque cupiditate tempore consequuntur. Officia natus sit tempora accusamus ratione consequatur eos dolor. 
+            </article>
+            <article class="photo">
+                <img src="static/images/poor-puppy-3.jpg">
+            </article>
+        </section>
+        <footer>
+            © 2020 Copyright: Warm Warm
+        </footer>
+    </div>
 </body>
 </html>
+
+<style>
+    a {
+        color: inherit; /* blue colors for links too */
+        text-decoration: inherit; /* no underline */
+    }
+    .container {
+        width: 1440px;
+        margin: 0px auto;
+        padding: 20px;
+    }
+
+    #header {
+        font-family: 'Balsamiq Sans', cursive;
+        letter-spacing: 5px;
+        font-size: 40;
+        padding: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    nav {
+        font-family: 'Balsamiq Sans', cursive;
+        letter-spacing: 1px;
+        font-size: 24;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    nav a {
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: center;
+    }
+    section {
+        text-align: center;  
+        margin-bottom: 150px;  
+    }
+
+    .photo {
+        width: 600px;
+        height: 800px;
+        margin: 50px;
+        display: inline-block;
+        background-color: #D8D8D8;
+        text-align: center;
+    }
+
+    .photo img {
+        width: 590px;
+        height: 790px;
+        position: relative;
+        top: 50%;
+        bottom: 50%;
+        transform: translate(0, -50%);
+    }
+    
+    .description {
+        width: 400px;
+        margin-top: 50px;
+        display: inline-block;
+        font-size: 20px;
+        font-family: 'Balsamiq Sans';
+        line-height: 35px;
+    }
+    
+    .bottom {
+        vertical-align: top;
+    }
+    
+    footer {
+        clear: both;
+        text-align: center;
+    }
+
+    #counter {
+        display: inline-block;
+    }
+
+    #warmth-counter {
+        float: right;
+    }
+
+</style>
+
+<script>
+    function numberCounter(target_frame, target_number) {
+    this.count = 0; this.diff = 0;
+    this.target_count = parseInt(target_number);
+    this.target_frame = document.getElementById(target_frame);
+    this.timer = null;
+    this.counter();
+};
+numberCounter.prototype.counter = function() {
+    var self = this;
+    this.diff = this.target_count - this.count;
+     
+    if(this.diff > 0) {
+        self.count += Math.ceil(this.diff / 5);
+    }
+     
+    this.target_frame.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+     
+    if(this.count < this.target_count) {
+        this.timer = setTimeout(function() { self.counter(); }, 50);
+    } else {
+        clearTimeout(this.timer);
+    }
+};
+
+new numberCounter("counter", 125000);
+</script>
