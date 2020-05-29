@@ -1,0 +1,106 @@
+@viewport { width: device-width; }
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+.container {
+    width: 1440px;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+#header {
+    font-family: 'Balsamiq Sans', cursive;
+    letter-spacing: 5px;
+    font-size: 40;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+nav {
+    font-family: 'Balsamiq Sans', cursive;
+    letter-spacing: 1px;
+    font-size: 24;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+nav a {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}
+
+section {
+    text-align: center;  
+    margin-bottom: 150px;  
+}
+
+.photo {
+    width: 600px;
+    height: 800px;
+    margin: 50px;
+    display: inline-block;
+    background-color: #D8D8D8;
+    text-align: center;
+}
+
+.photo img {
+    width: 594px;
+    height: 794px;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(0, -50%);
+}
+
+.description {
+    width: 400px;
+    margin: 50px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    line-height: 35px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.bottom {
+    vertical-align: top;
+    margin: 150px;
+    margin-top: 50px;
+    display: inline-block;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding-top: 200px;
+    opacity: 50%;
+}
+
+#counter {
+    display: inline-block;
+}
+
+#warmth-counter {
+    float: right;
+}
+
+.description-title {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 36px;
+}
+
+.description-subtitle {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
+}
