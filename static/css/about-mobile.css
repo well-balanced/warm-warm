@@ -1,0 +1,107 @@
+@viewport { width: device-width; }
+
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+
+
+body {
+    margin: 0 auto;
+}
+
+.container {
+    width: 400px;
+    text-align: center;
+}
+
+#header {
+    font-family: 'Balsamiq Sans', cursive;
+    letter-spacing: 5px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#header h1 {
+    font-size: 50px;
+}
+
+#header span {
+    display: inline-block;
+    font-size: 20px;
+}
+
+#header span p {
+    display: inline-block;
+    font-size: 30px;
+}
+
+
+nav {
+    font-family: 'Balsamiq Sans', cursive;
+    letter-spacing: 1px;
+    font-size: 24;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+nav a {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+img {
+    width: 70%;
+}
+
+section {
+    text-align: center;  
+    margin-top: 100px;  
+}
+
+.photo {
+    width: 300px;
+    height: 400px;
+    margin: 50px;
+    display: inline-block;
+    background-color: #D8D8D8;
+    text-align: center;
+}
+
+.photo img {
+    width: 296px;
+    height: 396px;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(0, -50%);
+}
+
+.description {
+    width: 400px;
+    margin-top: 50px;
+    display: inline-block;
+    font-size: 15px;
+    font-family: 'Nanum Gothic', sans-serif;
+    line-height: 35px;
+}
+
+.description-title {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 40px;
+}
+
+.description-subtitle {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding-top: 100px;
+    opacity: 50%;
+}

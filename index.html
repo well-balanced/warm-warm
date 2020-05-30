@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://well-balanced.github.io/warm-warm/">
+    <meta property="og:title" content="Warm Warm">
+    <meta property="og:description" content="따뜻하게 안아주세요">
+    <meta property="og:image" content="static/images/pome.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Nanum+Gothic&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.js"
+    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+    crossorigin="anonymous"></script>
+    <title>Warm Warm</title>
+    <link rel=" shortcut icon" href="static/icons/favicon.ico">
+    <link rel="icon" href="static/icons/favicon.ico">
+    <link rel="stylesheet" media="screen and (min-width: 769px)" href="static/css/about-web.css" />
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="static/css/about-mobile.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <h1>Warm Warm</h1>
+            <span id="warmth-counter">wammer's warmth🎁 <p id="counter"></p> won</span>
+        </div>
+        <nav>
+            <a href="/">ABOUT</a>
+            <a href="/">STORY</a>
+            <a href="/">SHOP</a>
+        </nav>
+        <section>
+            <article class="photo">
+                <img src="static/images/poor-puppy-1.jpg">
+            </article>
+            <article class="description">
+                <p class="description-title">“ 편지 ”</p>
+                <p class="description-subtitle"><strong><u style="text-underline-position: under;">반려동물의 가슴 아픈 사연을 들려주세요.</u></strong></p>
+                저희는 여러분들이 알고 있는 안타까운 사연을 널리 알리고, 
+                <br>
+                회원님의 공감을 받은 사연을 돕기 위해 제품을 기획합니다.
+                <br><br>
+                여러분의 정성 어린 글은
+                <br>
+                반려동물에게 따뜻한 관심으로 전해집니다.
+                <br>
+                <br>
+                <img style="zoom: 0.5;"src="static/images/go-to-community-letter.png">
+            </article>
+        </section>
+        <section>
+            <article class="photo right">
+                <img src="static/images/poor-puppy-3.jpg">
+            </article>
+            <article class="description bottom">
+                <p class="description-title">“ 따뜻함 ”</p>
+                <p class="description-subtitle"><strong><u style="text-underline-position: under;">소비로 가치를 표현하세요.</u></strong></p>
+                저희는 운영비를 제외한 모든 수익금을 
+                <br>
+                안타까운 반려동물을 위해 사용하고 있습니다.
+                <br><br>
+                여러분의 가치있는 소비는 
+                <br>
+                반려동물에게 따뜻한 온기로 전해집니다.
+                <br>
+                <br>
+                <img style="zoom: 0.5;"src="static/images/go-to-shop-warmth.png">
+            </article>
+        </section>
+        <footer>
+            © 2020 Copyright: Warm Warm
+        </footer>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function numberCounter(target_frame, target_number) {
+    this.count = 0; this.diff = 0;
+    this.target_count = parseInt(target_number);
+    this.target_frame = document.getElementById(target_frame);
+    this.timer = null;
+    this.counter();
+};
+numberCounter.prototype.counter = function() {
+    var self = this;
+    this.diff = this.target_count - this.count;
+     
+    if(this.diff > 0) {
+        self.count += Math.ceil(this.diff / 5);
+    }
+     
+    this.target_frame.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+     
+    if(this.count < this.target_count) {
+        this.timer = setTimeout(function() { self.counter(); }, 50);
+    } else {
+        clearTimeout(this.timer);
+    }
+};
+
+new numberCounter("counter", 125000);
+</script>
